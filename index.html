@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Digital com Previsão do Tempo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="settings-icon">
+            <i class="fas fa-cog"></i>
+        </div>
+        
+        <div class="clock">
+            <div class="time" id="time">00:00:00</div>
+            <div class="date" id="date">01 Janeiro 2024</div>
+        </div>
+        
+        <div class="weather">
+            <div class="weather-icon">
+                <i class="fas fa-cloud"></i>
+            </div>
+            <div class="weather-info">
+                <div class="temperature" id="temperature">--°C</div>
+                <div class="description" id="weather-description">Carregando...</div>
+                <div class="location" id="location">Cidade</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Painel de Configurações -->
+    <div class="settings-panel" id="settings-panel">
+        <div class="settings-header">
+            <h3>Configurações</h3>
+            <button class="close-settings">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="settings-group">
+            <label>Cor do Fundo:</label>
+            <div class="color-options">
+                <button class="color-btn" data-color="default">Padrão</button>
+                <button class="color-btn" data-color="blue">Azul</button>
+                <button class="color-btn" data-color="purple">Roxo</button>
+                <button class="color-btn" data-color="green">Verde</button>
+            </div>
+        </div>
+        <div class="settings-group">
+            <label>Tamanho do Relógio:</label>
+            <input type="range" id="clock-size" min="2" max="6" value="4" step="0.5">
+        </div>
+        <div class="settings-group">
+            <label>Formato 24h:</label>
+            <input type="checkbox" id="format-24h" checked>
+        </div>
+        <div class="settings-group">
+            <label>Mostrar Segundos:</label>
+            <input type="checkbox" id="show-seconds" checked>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
